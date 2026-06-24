@@ -1,0 +1,85 @@
+mon-site-ia/
+│
+├── index.html
+├── generator.html
+├── projects.html
+├── login.html
+├── register.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── app.js
+│
+└── images/body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    margin:0;
+}
+
+header{
+    background:#7b2cbf;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+textarea{
+    width:100%;
+    height:150px;
+}
+
+button{
+    background:#7b2cbf;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    cursor:pointer;
+}function generateSite() {
+    let idea = document.getElementById("prompt").value;
+
+    if(idea === ""){
+        alert("Décris ton site !");
+        return;
+    }
+
+    alert("IA en cours de génération : " + idea);
+}<!DOCTYPE html>
+<html>
+<head>
+<title>Web Creator AI</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+<h1>Web Creator AI</h1>
+<p>Crée ton site web avec l'intelligence artificielle</p>
+</header>
+
+<div class="container">
+<h2>Décris ton site</h2>
+
+<textarea id="prompt"
+placeholder="Exemple : Je veux un site de restaurant moderne"></textarea>
+
+<br><br>
+
+<button onclick="generateSite()">
+Générer le site
+</button>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
